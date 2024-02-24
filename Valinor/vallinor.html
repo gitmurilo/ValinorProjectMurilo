@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> Valinor </title>
+        <link rel="stylesheet" type="text/css" href="style/style.css">
+    </head>
+<body>
+<a href="vallinor.html"><img src="images/logo.png"></a>
+    <div>
+        <form onsubmit="buscarRepositorios(event)">
+        <label for="search_repo"> Valinor </label><br><br>
+        <input type="search" name="search_repo" id="search_repo" placeholder="Insira o nome do repositório" required> <br><br>
+        <input type="submit" name="btn-enviar" value="Buscar" id="btn-enviar"><br>    
+        </form>   
+    </div>
+    <div id="repos-list"></div>
+        <p style="color:rgb(255, 255, 255); font-size: 20px;">Feito por: <a href="https://www.linkedin.com/in/murilo-santoss/" style="color:rgb(0, 153, 255)" >Murilo</a></p>
+        <script src="script/script.js"></script>
+    </body>
+</html>
