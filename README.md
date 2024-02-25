@@ -1,7 +1,7 @@
 # Desafio Técnico Valinor 🌳
-# [Você pode acessar este projeto clicando aqui!](https://gitmurilo.github.io/ValinorProjectMurilo/index.html)
 
 ## Desafio técnico da Field Control, consumindo a API do GitHub para consulta de repositórios, com paginação! 🔍
+  <strong>[Você pode acessar este projeto clicando aqui!](https://gitmurilo.github.io/ValinorProjectMurilo/index.html)</strong>
 
 ## Sobre mim 👨‍💻
   Olá, me chamo Murilo e estive presente na entrevista feita na FATEC, estou em busca de um estágio e tenho grande interesse em desenvolvimento web e segurança da informação. Gosto de pensar como as coisas podem ser modificadas e alteradas de diversas maneiras fora do convencional e acredito que isso proporciona uma grande compreensão do que é criado, desmontado e recriado. Ainda me considero um iniciante na programação e sei que há muito o que melhorar, mas tenho grande vontade de aprender e praticar o que estudo, sempre gostei e tive grande contato com tecnologia na infância e adolescência, desde jogos online, emuladores e tentativas de hacking e gamedev sempre gostei de passar um tempo no computador e vejo a incrível capacidade que a computação e programação tem de serem aplicadas em diversas áreas.
