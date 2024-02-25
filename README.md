@@ -8,6 +8,12 @@
 - JavaScript
 - GitHub API REST
   
-## Screenshot
+## Screenshot 📸
 
 <img src="screens/screen.png">
+
+## Implementação de segurança na consulta 🔒
+Ao realizar consultas com um payload de XSS pude perceber a vulnerabilidade no consumo da API, pois os dados não eram sanitizados adequadamente.<br>
+Pude reparar que ao digitar no campo de pesquisa (input) o payload:
+<code> <script>alert("teste") <script></code>
+  
