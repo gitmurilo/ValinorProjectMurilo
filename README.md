@@ -71,5 +71,7 @@ Para realizar a correção fiz a sanitização dos parâmetros de requisição p
 </code>
 
 ## CONTATO ☎✉️
+Email: murilosantosdeveloper@protonmail.com
+LinkedIn: https://www.linkedin.com/in/murilo-santoss/
 
   
