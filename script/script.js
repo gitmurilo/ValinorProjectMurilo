@@ -2,7 +2,6 @@ const perPageSearch = 5; // Resultados totais exibidos em cada página
 let currentPageSearch = 1; // Página inicial na busca
 let currentSearchTerm = ''; // Termo de pesquisa atual
 
-
 function buscarRepositorios(event) {
     event.preventDefault(); // Evita o envio padrão do formulário
     
@@ -31,8 +30,6 @@ function buscarRepositorios(event) {
                     const SanitizedIssues= document.createTextNode(repo.open_issues_count);
                     const SanitizedUrl=document.createTextNode(repo.html_url);
     
-    
-    
                 repoItem.innerHTML = `
                  
                     <a href=${SanitizedUrl.nodeValue} style="color:rgb(0, 132, 255)" target="_blank"><strong>${SanitizedRepoName.nodeValue}</strong></a><br>
@@ -41,7 +38,6 @@ function buscarRepositorios(event) {
                     <span style="color:white">💾Descrição: ${SanitizedDescription.nodeValue} <br>
                     <hr>
                 `;
-                
                 reposList.appendChild(repoItem);
             });
     
