@@ -23,7 +23,7 @@ Para realizar a correção fiz a sanitização dos parâmetros de requisição p
 <strong>Código antigo (vulnerável)</strong><br>
 <code><br>
 
-repoItem.innerHTML = `
+<code> repoItem.innerHTML = `</code>
              
                 <a href=${repo.html_url} style="color:rgb(0, 132, 255)" target="_blank"><strong>${repo.full_name}</strong></a><br>
                 <span style="color:white">🌟Stars: ${repo.stargazers_count} | 👀Watchers: ${repo.watchers_count}</span><br>
