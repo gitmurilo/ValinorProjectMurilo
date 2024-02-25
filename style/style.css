@@ -1,8 +1,5 @@
 body {
-    /* Define o gradiente escuro */
         background: rgb(51, 51, 51);
-                
-    /* Ajusta o tamanho da imagem de fundo e a torna responsiva */
         background-size: cover;
         background-position: center;
      }
@@ -31,7 +28,6 @@ body {
      #search_repo{
        height: 30px;
      }
-
 
      #pagination-search button.active {
       background-color: transparent;
