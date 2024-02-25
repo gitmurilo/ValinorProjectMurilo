@@ -18,6 +18,9 @@ Pude reparar que ao digitar no campo de pesquisa (input) o payload:
 <code> <script>alert("XSS")<script></code>
 Eram executados repositórios maliciosos com esse nome, redirecionando para páginas paralelas na própria aplicação!
 
+O XSS (Cross-site Scripting) é um tipo de vulnerabilidade que permite a execução de código em campos de entrada, colocando o sistema em risco pois invasores podem utilizar do redirecionamento de página para roubo de informações, sequestro de tokens de sessão, disseminação de malwares etc. Existindo tanto o tipo refletido (executado apenas na sessão e navegador atual) como o tipo armazenado (salvo no servidor e mantindo de forma persistente, por isso também chamado de XSS persistente).
+
+Você pode ler mais sobre XSS aqui:
  **[O que é a vulnerabilidade XSS?](https://www.kaspersky.com.br/resource-center/definitions/what-is-a-cross-site-scripting-attack)**
 
 Para realizar a correção fiz a sanitização dos parâmetros de requisição para nodeValue, onde o navegador não mais interpretaria as entradas como código e sim como texto.
