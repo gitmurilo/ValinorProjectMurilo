@@ -1,4 +1,4 @@
-const perPageSearch = 5; // Número de resultados por página na busca
+const perPageSearch = 5; // Resultados totais exibidos em cada página
 let currentPageSearch = 1; // Página inicial na busca
 let currentSearchTerm = ''; // Termo de pesquisa atual
 
@@ -8,7 +8,7 @@ function buscarRepositorios(event) {
     
     const termoPesquisa = document.getElementById('search_repo').value;
       if (termoPesquisa !== currentSearchTerm) {
-        // Se o termo de pesquisa for diferente, redefina para a primeira página
+            // Caso o termo de pesquisa seja alterado, retornará para o primeiro elemento da paginação
         currentPageSearch = 1;
         currentSearchTerm = termoPesquisa;
     }
@@ -58,7 +58,7 @@ function createPaginationButtonsSearch(totalItems) {
     const backButton = document.createElement('button');
     backButton.innerText = 'Anterior';
     backButton.addEventListener('click', () => changePageSearch(currentPageSearch - 1));
-    backButton.disabled = currentPageSearch === 1; // Desabilita o botão se estiver na primeira página
+    backButton.disabled = currentPageSearch === 1; // Desabilita o botão caso esteja na primeira página
     paginationContainer.appendChild(backButton);
 
     const currentPageButton = document.createElement('button');
@@ -70,12 +70,12 @@ function createPaginationButtonsSearch(totalItems) {
     const nextButton = document.createElement('button');
     nextButton.innerText = 'Próximo';
     nextButton.addEventListener('click', () => changePageSearch(currentPageSearch + 1));
-    nextButton.disabled = (currentPageSearch * perPageSearch) >= totalItems; // Desabilita se estiver na última página
+    nextButton.disabled = (currentPageSearch * perPageSearch) >= totalItems; // Desabilita o botão caso esteja na última página
     paginationContainer.appendChild(nextButton);
 }
 
 function changePageSearch(page) {
-    currentPageSearch = Math.max(1, page); // Garante que a página não seja menor que 1
+    currentPageSearch = Math.max(1, page); // Impede que a página seja menor que 1 
     buscarRepositorios(new Event('submit'));
 }
 
