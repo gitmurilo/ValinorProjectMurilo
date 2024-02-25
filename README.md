@@ -35,4 +35,33 @@ Para realizar a correção fiz a sanitização dos parâmetros de requisição p
             reposList.appendChild(repoItem);
         });
 </code>
+
+<strong>Código atualizado (seguro contra XSS) ✔️</strong><br>
+
+<code><br>
+ repoItem.innerHTML = `
+             
+                //Sanitização de dados antes da interpretação pelo navegador (Evitar XSS)//
+                    const SanitizedRepoName = document.createTextNode(repo.full_name);
+                    const SanitizedDescription= document.createTextNode(repo.description);
+                    const SanitizedStars= document.createTextNode(repo.stargazers_count);
+                    const SanitizedWatchers= document.createTextNode(repo.wachers_count);
+                    const SanitizedForks= document.createTextNode(repo.forks_count);
+                    const SanitizedIssues= document.createTextNode(repo.open_issues_count);
+                    const SanitizedUrl=document.createTextNode(repo.html_url);
+    
+    
+    
+                repoItem.innerHTML = `
+                 
+                    <a href=${SanitizedUrl.nodeValue} style="color:rgb(0, 132, 255)" target="_blank"><strong>${SanitizedRepoName.nodeValue}</strong></a><br>
+                    <span style="color:white">🌟Stars: ${SanitizedStars.nodeValue} | 👀Watchers: ${SanitizedWatchers.nodeValue}</span><br>
+                    <span style="color:white">📋Forks: ${SanitizedForks.nodeValue} | 🚨Issues: ${SanitizedIssues.nodeValue}</span><br>
+                    <span style="color:white">💾Descrição: ${SanitizedDescription.nodeValue} <br>
+                    <hr>
+                `;
+                
+                reposList.appendChild(repoItem);
+            });
+</code>
   
