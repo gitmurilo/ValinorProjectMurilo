@@ -10,4 +10,4 @@
   
 ## Screenshot
 
-<img src="screens/screenshot.png"
+<img src="screens/screenshot.png">
