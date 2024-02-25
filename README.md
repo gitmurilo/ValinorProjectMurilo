@@ -7,5 +7,5 @@
 - CSS3
 - JavaScript
 - GitHub API REST
-- 
+  
 ## Screenshot
