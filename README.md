@@ -20,8 +20,18 @@ Eram executados repositórios maliciosos com esse nome, redirecionando para pág
 
 Para realizar a correção fiz a sanitização dos parâmetros de requisição para nodeValue, onde o navegador não mais interpretaria as entradas como código e sim como texto.
 
-<strong>Código antigo (vulnerável) </strong>
-<code>
-aaaa
+<strong>Código antigo (vulnerável)</strong>
+<code><br>
+repoItem.innerHTML = `
+             
+                <a href=${repo.html_url} style="color:rgb(0, 132, 255)" target="_blank"><strong>${repo.full_name}</strong></a><br>
+                <span style="color:white">🌟Stars: ${repo.stargazers_count} | 👀Watchers: ${repo.watchers_count}</span><br>
+                <span style="color:white">📋Forks: ${repo.forks_count} | 🚨Issues: ${repo.open_issues_count}</span><br>
+                <span style="color:white">💾Descrição: ${repo.description} <br>
+                <hr>
+            `;
+            
+            reposList.appendChild(repoItem);
+        });
 </code>
   
