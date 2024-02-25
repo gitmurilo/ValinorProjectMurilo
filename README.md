@@ -21,7 +21,8 @@ Eram executados repositórios maliciosos com esse nome, redirecionando para pág
 Para realizar a correção fiz a sanitização dos parâmetros de requisição para nodeValue, onde o navegador não mais interpretaria as entradas como código e sim como texto.
 
 <strong>Código antigo (vulnerável)</strong>
-<code><br>
+<code><br><br>
+
 repoItem.innerHTML = `
              
                 <a href=${repo.html_url} style="color:rgb(0, 132, 255)" target="_blank"><strong>${repo.full_name}</strong></a><br>
