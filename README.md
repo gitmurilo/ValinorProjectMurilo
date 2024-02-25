@@ -20,8 +20,8 @@ Eram executados repositórios maliciosos com esse nome, redirecionando para pág
 
 Para realizar a correção fiz a sanitização dos parâmetros de requisição para nodeValue, onde o navegador não mais interpretaria as entradas como código e sim como texto.
 
-<strong>Código antigo (vulnerável)</strong>
-<code><br><br>
+<strong>Código antigo (vulnerável)</strong><br>
+<code><br>
 
 repoItem.innerHTML = `
              
