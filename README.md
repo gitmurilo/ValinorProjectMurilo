@@ -20,7 +20,7 @@
 ## Implementação de segurança na consulta 🔒
 Ao realizar consultas com um payload de XSS pude perceber a vulnerabilidade no consumo da API, pois os dados não eram sanitizados adequadamente.<br>
 Pude reparar que ao digitar no campo de pesquisa (input) o payload:
-<code> <script>alert("XSS")<script></code>
+<code> <script>alert("XSS")<script></code><br>
 Eram executados repositórios maliciosos com esse nome, redirecionando para páginas paralelas na própria aplicação!
 
 O XSS (Cross-site Scripting) é um tipo de vulnerabilidade que permite a execução de código em campos de entrada, colocando o sistema em risco pois invasores podem utilizar do redirecionamento de página para roubo de informações, sequestro de tokens de sessão, disseminação de malwares etc. Existindo tanto o tipo refletido (executado apenas na sessão e navegador atual) como o tipo armazenado (salvo no servidor e mantindo de forma persistente, por isso também chamado de XSS persistente).
